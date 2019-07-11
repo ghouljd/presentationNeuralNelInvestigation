@@ -4,11 +4,11 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>Metodologia - IPv6</title>
+		<title>Presentación - Paquete apnnClassifier</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/bootstrap.min.css">
-		<link rel="stylesheet" href="css/theme/night.css">
+		<link rel="stylesheet" href="css/theme/white.css">
 		<link rel="stylesheet" href="css/style.css">
 
 		<!-- Theme used for syntax highlighting of code -->
@@ -27,25 +27,33 @@
 		<div class="reveal">
 			<div class="slides"  id="fragments">
 				<section class="presentation">
-					<img src="img/logo_unet.png" alt="" />
-					<p>
-						Universidad Nacional Experimental del Táchira - 
-						Vicerrectorado Académico - 
-						Decanato de Docencia - 
-						Departamento de Ingeniería en Informática - 
-						Trabajo de Aplicación Profesional - 
-						Proyecto Especial de Grado
-					</p>
-					<h4>
-						Paquete en lenguaje R para la clasificación de tubérculos de papa criolla(Solanum
-						phureja) para diferentes densidades de siembra empleando redes neuronales
+					<div class="header-intro">
+						<img src="img/unet.jpg" class="plain" />
+						<div>
+							<p>
+								Universidad Nacional Experimental del Táchira
+							</p>
+							<p>
+								Vicerrectorado Académico
+							</p>
+							<p>
+								Departamento de Ingeniería en Informática
+							</p>
+							<p>
+								Proyecto Especial de Grado
+							</p>
+						</div>
+					</div>
+					<h4 class="main-title">
+						Paquete en lenguaje R para la clasificación de tubérculos de papa criolla <i>(Solanum
+						phureja)</i> para diferentes densidades de siembra empleando redes neuronales
 						probabilı́sticas.
 					</h4>
 					<p class="text-right">
 						Autor: Jesús Escalante. - jesusd.escalante@unet.edu.ve
 					</p>
 					<p class="text-right">
-						Tutor: Rossana Timaure - rttg@unet.edu.ve
+						Tutor: Dra. Rossana Timaure - rttg@unet.edu.ve
 					</p>
 					<p>
 						Julio, 2019.
@@ -59,21 +67,34 @@
 						<h2>Planteamiento y formulación del problema</h2>
 						<ul>
 							<li>
-								<h4 class="fragment">Papa criolla (Solanum phureja).</h4>
-								<ol>
-									<li class="fragment">Intereses comerciales.</li>
-									<li class="fragment">Manipulación de variables, pero la densidad de siembra es espacial.</li>
+								<h4 class="fragment">Papa criolla <i>(Solanum phureja)</i>.</h4>
+								<div class="fragment" style="display: flex; 
+											justify-content: space-between;
+											align-items: flex-end;
+								">
+									<div  style="max-width: 40%">
+										<p>Intereses comerciales.</p>
+										<img src="img/cultivo.jpg" style="height: 5em;"/>
+									</div>
+									<div style="max-width: 45%">
+										<p>Manipulación de variables, pero la densidad de siembra es espacial.</p>
+										<img src="img/surcos.jpeg"  style="height: 5em;"/>
+									</div>
+								</div>
 								</ol>
 							</li>
-							<li class="fragment"><h4>Redes neuronales artificiales y probabilísticas.</h4></li>
-							<li class="fragment"><h4>Lenguaje de programación estadístico R.</h4></li>
 						</ul>
 					</section>
 					<section>
-						<h2 class="text-left">Objetivo General</h2>
-						<p class="text-left">
-							Desarrollar un paquete en lenguaje R que permita la clasificación de tubérculos de papa
-							criolla (Solanum phureja) para diferentes densidades de siembra empleando redes neuronales
+						<h2>Planteamiento y formulación del problema</h2>
+						<ul>
+							<li><h4>Lenguaje de programación R.</h4></li>
+						</ul>
+					</section>
+					<section>
+						<h2 class="text-center">Objetivo General</h2>
+						<p class="text-center">
+							Desarrollar un paquete en lenguaje R que permita la clasificación de tubérculos de papa criolla <i>(Solanum phureja)</i> para diferentes densidades de siembra empleando redes neuronales
 							probabilı́sticas.
 						</p>
 					</section>
@@ -89,23 +110,27 @@
 							<li class="fragment">
 								<p>
 									Diseñar los algoritmos para las funciones principales que permitan el entrenamiento de una
-									red neuronal probabilı́stica para la clasificación de tubérculos de papa criolla (Solanum
-									phureja) para diferentes densidades de siembra.
-								</p>
-							</li>
-							<li class="fragment">
-								<p>
-									Implementar las funciones para la clasificación de tubérculos de papa criolla para diferentes
-									densidades de siembra, basadas en los algorı́tmos desarrollados.
-								</p>
-							</li>
-							<li class="fragment">
-								<p>
-									Realizar la pruebas del paquete desarrollado bajo diferente escenarios.
+									red neuronal probabilı́stica para la clasificación de tubérculos de papa criolla <i>(Solanum phureja)</i> para diferentes densidades de siembra.
 								</p>
 							</li>
 						</ul>
 					</section>
+					<section>
+							<h2 class="text-left">Objetivos Específicos</h2>
+							<ul>
+								<li class="fragment">
+									<p>
+										Implementar las funciones para la clasificación de tubérculos de papa criolla para diferentes
+										densidades de siembra, basadas en los algorı́tmos desarrollados.
+									</p>
+								</li>
+								<li class="fragment">
+									<p>
+										Realizar la pruebas del paquete desarrollado bajo diferente escenarios.
+									</p>
+								</li>
+							</ul>
+						</section>
 					<section>
 						<h2>Aportes de la investigación</h2>
 						<ul>								
@@ -134,29 +159,40 @@
 					<section>
 						<h2>Antecedentes</h2>
 						<ul>
-							<li class="fragment">
+							<li>
 								<h4>
 									Cálculo de la tasa de germinación utilizando un clasificador basado en redes neuronales a partir de imágenes de plántulas previamente segmentadas.
 								</h4>
 							</li>
-							<li class="fragment">
+						</ul>
+					</section>
+					<section>
+						<h2>Antecedentes</h2>
+						<ul>
+							<li>
 								<h4>Un algoritmo de reconocimiento de hojas para la clasificación de plantas utilizando una red neuronal probabilística.</h4>
-							</li>
-							<li class="fragment">
-								<h4>Modelado del Calibre de tubérculos de papa Solanum phureja bajo diferentes densidades de siembra mediante regresión binomial negativa cero-inflada.</h4>
 							</li>
 						</ul>
 					</section>
 					<section>
-						<h2>Bases Teóricas</h2>
+						<h2>Antecedentes</h2>
 						<ul>
-							<li class="fragment">Papa criolla (Solanum Phureja)</li>
-							<li class="fragment">Redes neuronales artificiales.</li>
-							<li class="fragment">Redes neuronales probabilı́sticas.</li>
-							<li class="fragment">Curvas ROC.</li>
-							<li class="fragment">Lenguaje R.</li>
-							<li class="fragment">Estructura de paquetes en R/RStudio.</li>
-							<li class="fragment">RStudio.</li>
+							<li>
+								<h4>Modelado del Calibre de tubérculos de papa <i>Solanum phureja</i> bajo diferentes densidades de siembra mediante regresión binomial negativa cero-inflada.</h4>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Bases Teóricas</h2></ul>
+						<ul>
+							<li>Redes neuronales artificiales.</li>
+						</ul>
+						<img class="fragment" src="img/ann.png" style="height: 10em;"/>
+					</section>
+					<section>
+						<h2>Bases Teóricas</h2></ul>
+						<ul>
+							<li>Redes neuronales probabilı́sticas.</li>
 						</ul>
 					</section>
 				</section>
@@ -178,19 +214,16 @@
 							<li>
 								<h3 class="fragment">Desarrollo del paquete en R.</h3>
 								<ol>
-									<l1 class="fragment">Creación del esqueleto del paquete</l1>
-									<l1 class="fragment"> - Diseño de las soluciones algorı́tmicas</l1>
-									<l1 class="fragment"> - Codificación de los algoritmos</l1>
-									<l1 class="fragment"> - Registrar el método para el envı́o y uso de funciones</l1>
-									<l1 class="fragment"> - Diseñar y entrenar la red neuronal probabilı́stica</l1>
-									<l1 class="fragment"> - Pruebas unitarias de las funciones</l1>
-									<l1 class="fragment"> - Implementar y realizar pruebas de clasificación</l1>
-									<l1 class="fragment"> - Chequear la carga del paquete</l1>
-									<l1 class="fragment"> - Construcción del método de distribución del paquete</l1>
+									<li class="fragment">Creación del esqueleto del paquete</li>
+									<li class="fragment">Diseño de las soluciones algorı́tmicas</li>
+									<li class="fragment">Codificación de los algoritmos</li>
+									<li class="fragment">Registrar el método para el envı́o y uso de funciones</li>
+									<li class="fragment">Diseñar y entrenar la red neuronal probabilı́stica</li>
+									<li class="fragment">Pruebas unitarias de las funciones</li>
+									<li class="fragment">Implementar y realizar pruebas de clasificación</li>
+									<li class="fragment">Chequear la carga del paquete</li>
+									<li class="fragment">Construcción del método de distribución del paquete</li>
 								</ol>
-							</li>
-							<li class="fragment">
-								<h3>Comparación de resultados.</h3>
 							</li>
 						</ul>
 					</section>
@@ -203,39 +236,106 @@
 						<h2>
 							Creación del esqueleto del paquete.
 						</h2>
+						<img src="img/archivos.png" alt="">
 					</section>
 					<section>
 						<h2>
 							Diseño de las soluciones algorı́tmicas.
 						</h2>
+					</section>
+					<section>
+						<h4>
+							Diseño de las soluciones algorı́tmicas para el entrenamiento de una red
+							neuronal probabilı́stica que permita la clasificación de tubérculos de papa.
+						</h4>
 						<ul>
 							<li class="fragment">
-								Diseño de las soluciones algorı́tmicas para el entrenamiento de una red
-								neuronal probabilı́stica que permita la clasificación de tubérculos de papa.
+								Entrenamiento y clasificación <i>(trainNeuralNet).</i>
 							</li>
 							<li class="fragment">
-								Diseño del algoritmo de la función de entrenamiento y clasificación de la red
-								(trainNeuralNet).
+								Evaluación <i>(Evaluate).</i>
 							</li>
 							<li class="fragment">
-								Diseño del algoritmo de la función de evaluación de la red neuronal
-								probabilı́stica y su clasificación (evaluate).
-							</li>
-							<li class="fragment">
-								Diseño del algoritmo de la función de estandarización de datos (standardize).
+								Estandarización <i>Standardize</i>
 							</li>
 						</ul>
+					</section>
+					<section>
+						<div style="display: flex;
+									justify-content: space-between;
+									align-items: center;
+									">
+							<div>
+								<h4>
+									Entrenamiento y clasificación <i style="text-transform: none">(trainNeuralNet).</i>
+								</h4>
+								<ul>
+									<li>Dependencia del paquete <i>pnn</i></li>
+								</ul>
+							</div>
+							<img src="img/evaluate.png" style="height: 18em;">
+						</div>
+					</section>
+					<section>
+						<div style="display: flex;
+									justify-content: space-between;
+									align-items: center;
+									">
+							<div>
+								<h4>
+									Evaluación <i style="text-transform: none">(Evaluate).</i>
+								</h4>
+								<ul>
+									<li>Dependencia del paquete <i>pROC</i></li>
+								</ul>
+							</div>
+							<img src="img/trainNeuralNet.png" style="height: 18em;">
+						</div>
+					</section>
+					<section>
+						<div style="display: flex;
+									justify-content: space-between;
+									align-items: center;
+									">
+							<h4>
+								Estandarización <i style="text-transform: none">(Standardize).</i>
+							</h4>
+							<img src="img/standardize.png" style="height: 18em;">
+						</div>
 					</section>
 					<section>
 						<h2>Codificación de los algoritmos.</h2>
-						<ul>
-							<li class="fragment">Función de entrenamiento y clasificación de la red (trainNeuralNet).</li>
-							<li class="fragment">Función de evaluación de la red (evaluate).</li>
-							<li class="fragment">Función de estandarización de datos (standardize).</li>
-						</ul>
+					</section>
+					<section>
+						<h4>
+							Entrenamiento y clasificación <i style="text-transform: none">(trainNeuralNet).</i>
+						</h4>
+						<img src="img/inputTrainNeuralNet.png" style="width: 100%;">
+					</section>
+					<section>
+						<img src="img/codeTrainNeuralNet.png" style="height: 100%;">
+					</section>
+					<section>
+						<h4>
+							Evaluación <i style="text-transform: none">(Evaluate).</i>
+						</h4>
+						<img src="img/inputEvaluate.png" style="width: 100%;">
+					</section>
+					<section>
+						<img src="img/codeEvaluate.png" style="height: 100%;">
+					</section>
+					<section>
+						<h4>
+							Estandarización <i style="text-transform: none">(Standardize).</i>
+						</h4>
+						<img src="img/inputStandardize.png" style="width: 100%;">
+					</section>
+					<section>
+						<img src="img/codeStandardize.png" style="height: 100%;">
 					</section>
 					<section>
 						<h2>Chequeo del paquete, método de distribución y registro del método de envı́o.</h2>
+						<img src="img/github.png" style="width: 100%;">
 					</section>
 					<section>
 						<h2>Pruebas funcionales del paquete.</h2>
