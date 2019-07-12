@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>Presentación - Paquete apnnClassifier</title>
+		<title>Paquete apnnClassifier - Presentación</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/bootstrap.min.css">
@@ -44,11 +44,11 @@
 							</p>
 						</div>
 					</div>
-					<h4 class="main-title">
+					<h5 class="main-title">
 						Paquete en lenguaje R para la clasificación de tubérculos de papa criolla <i>(Solanum
 						phureja)</i> para diferentes densidades de siembra empleando redes neuronales
 						probabilı́sticas.
-					</h4>
+					</h5>
 					<p class="text-right">
 						Autor: Jesús Escalante. - jesusd.escalante@unet.edu.ve
 					</p>
@@ -89,6 +89,11 @@
 						<h2>Planteamiento y formulación del problema</h2>
 						<ul>
 							<li><h4>Lenguaje de programación R.</h4></li>
+							<ul>
+								<li class="fragment">Portable.</li>
+								<li class="fragment">Multiplataforma.</li>
+								<li class="fragment">Orientado a computación estadística.</li>
+							</ul>
 						</ul>
 					</section>
 					<section>
@@ -136,17 +141,17 @@
 						<ul>								
 							<li class="fragment">
 								<h4>
-									Sistema de producción poco eficiente.
+									Nueva herramienta para realizar clasificaciones basadas en redes neuronales probabilísticas, midiendo su rendimiento.
+								</h4>
+							</li>								
+							<li class="fragment">
+								<h4>
+									Arquitectura de siembra óptima.
 								</h4>
 							</li>
 							<li class="fragment">
 								<h4>
-									Los altos de precios de insumos agrícolas.
-								</h4>
-							</li>
-							<li class="fragment">
-								<h4>
-									Estudios lineales cuando la densidad de siembra es una variable de tipo espacial.
+									Análisis de variables espaciales sin supuestos estadísticos.
 								</h4>
 							</li>
 						</ul>
@@ -160,25 +165,13 @@
 						<h2>Antecedentes</h2>
 						<ul>
 							<li>
-								<h4>
-									Cálculo de la tasa de germinación utilizando un clasificador basado en redes neuronales a partir de imágenes de plántulas previamente segmentadas.
-								</h4>
+								Cálculo de la tasa de germinación utilizando un clasificador basado en redes neuronales a partir de imágenes de plántulas previamente segmentadas. <b>Mayabiro E. - 2011.</b>
 							</li>
-						</ul>
-					</section>
-					<section>
-						<h2>Antecedentes</h2>
-						<ul>
 							<li>
-								<h4>Un algoritmo de reconocimiento de hojas para la clasificación de plantas utilizando una red neuronal probabilística.</h4>
+								Un algoritmo de reconocimiento de hojas para la clasificación de plantas utilizando una red neuronal probabilística. <b>Stephen G. - 2013.</b>
 							</li>
-						</ul>
-					</section>
-					<section>
-						<h2>Antecedentes</h2>
-						<ul>
 							<li>
-								<h4>Modelado del Calibre de tubérculos de papa <i>Solanum phureja</i> bajo diferentes densidades de siembra mediante regresión binomial negativa cero-inflada.</h4>
+								Modelado del Calibre de tubérculos de papa <i>Solanum phureja</i> bajo diferentes densidades de siembra mediante regresión binomial negativa cero-inflada. <b>Bernal N. - 2017.</b>
 							</li>
 						</ul>
 					</section>
@@ -187,42 +180,39 @@
 						<ul>
 							<li>Redes neuronales artificiales.</li>
 						</ul>
-						<img class="fragment" src="img/ann.png" style="height: 10em;"/>
+						<img src="img/ann.png" style="height: 10em;"/>
 					</section>
 					<section>
 						<h2>Bases Teóricas</h2></ul>
 						<ul>
 							<li>Redes neuronales probabilı́sticas.</li>
 						</ul>
+						<img src="img/pnn.png" style="height: 6em;"/>
 					</section>
 				</section>
 				<section>
 					<section>
 						<h1>Fundamentos Metodológicos</h1>
+						<ul>
+							<li>Enfoque de la investigación: <b>Proyectivo.</b></li>
+							<li>Diseño de la investigación: <b>Secuencial algorítmico.</b>	</li>
+						</ul>
 					</section>
 					<section>
-						<h2>Enfoque de la investigación.</h2>
-						<h3>--- Proyectivo ---</h3>
-					</section>
-					<section>
-						<h2>Diseño de la investigación.</h2>
-						<h3>--- Secuencial algorítmico ---</h3>
-					</section>
-					<section>
-						<h2>Fases metodológicas.</h2>
+						<h2>Metodología.</h2>
 						<ul>
 							<li>
-								<h3 class="fragment">Desarrollo del paquete en R.</h3>
+								<h4>Desarrollo del paquete en R.</h3>
 								<ol>
-									<li class="fragment">Creación del esqueleto del paquete</li>
-									<li class="fragment">Diseño de las soluciones algorı́tmicas</li>
-									<li class="fragment">Codificación de los algoritmos</li>
-									<li class="fragment">Registrar el método para el envı́o y uso de funciones</li>
-									<li class="fragment">Diseñar y entrenar la red neuronal probabilı́stica</li>
-									<li class="fragment">Pruebas unitarias de las funciones</li>
-									<li class="fragment">Implementar y realizar pruebas de clasificación</li>
-									<li class="fragment">Chequear la carga del paquete</li>
-									<li class="fragment">Construcción del método de distribución del paquete</li>
+									<li>Creación del esqueleto del paquete</li>
+									<li>Diseño de las soluciones algorı́tmicas</li>
+									<li>Codificación de los algoritmos</li>
+									<li>Registrar el método para el envı́o y uso de funciones</li>
+									<li>Diseñar y entrenar la red neuronal probabilı́stica</li>
+									<li>Pruebas unitarias de las funciones</li>
+									<li>Implementar y realizar pruebas de clasificación</li>
+									<li>Chequear la carga del paquete</li>
+									<li>Construcción del método de distribución del paquete</li>
 								</ol>
 							</li>
 						</ul>
@@ -236,7 +226,10 @@
 						<h2>
 							Creación del esqueleto del paquete.
 						</h2>
-						<img src="img/archivos.png" alt="">
+						<div style="display: flex; align-items: center; justify-content: space-between;">
+							<img src="img/create.png" style="width: 48%;">
+							<img src="img/archivos.png">
+						</div>
 					</section>
 					<section>
 						<h2>
@@ -277,13 +270,22 @@
 						</div>
 					</section>
 					<section>
+						<h4>Ajustes realizados - paquete <i>pnn.</i></h4>
+						<ul>
+							<li>Manejo de versiones en github.</li>
+							<li>Manejo de datos faltantes <i>(NA)</i> mal manejado.</li>
+						</ul>
+						<img src="img/changepnn.png" style="height: 4em;">
+						<img src="img/fork.png" style="height: 8em;">
+					</section>
+					<section>
 						<div style="display: flex;
 									justify-content: space-between;
 									align-items: center;
 									">
 							<div>
 								<h4>
-									Evaluación <i style="text-transform: none">(Evaluate).</i>
+									Evaluación <i style="text-transform: none">(evaluate).</i>
 								</h4>
 								<ul>
 									<li>Dependencia del paquete <i>pROC</i></li>
@@ -297,10 +299,14 @@
 									justify-content: space-between;
 									align-items: center;
 									">
-							<h4>
-								Estandarización <i style="text-transform: none">(Standardize).</i>
-							</h4>
-							<img src="img/standardize.png" style="height: 18em;">
+							<div>
+								<h4>
+									Estandarización <i style="text-transform: none">(standardize).</i>
+								</h4>
+								<img src="img/punctual.png" style="height: 5em;">
+								<img src="img/scale.png" style="height: 5em;">
+							</div>
+							<img src="img/standardize.png" style="height: 14em;">
 						</div>
 					</section>
 					<section>
@@ -313,25 +319,16 @@
 						<img src="img/inputTrainNeuralNet.png" style="width: 100%;">
 					</section>
 					<section>
-						<img src="img/codeTrainNeuralNet.png" style="height: 100%;">
-					</section>
-					<section>
 						<h4>
-							Evaluación <i style="text-transform: none">(Evaluate).</i>
+							Evaluación <i style="text-transform: none">(evaluate).</i>
 						</h4>
 						<img src="img/inputEvaluate.png" style="width: 100%;">
 					</section>
 					<section>
-						<img src="img/codeEvaluate.png" style="height: 100%;">
-					</section>
-					<section>
 						<h4>
-							Estandarización <i style="text-transform: none">(Standardize).</i>
+							Estandarización <i style="text-transform: none">(standardize).</i>
 						</h4>
 						<img src="img/inputStandardize.png" style="width: 100%;">
-					</section>
-					<section>
-						<img src="img/codeStandardize.png" style="height: 100%;">
 					</section>
 					<section>
 						<h2>Chequeo del paquete, método de distribución y registro del método de envı́o.</h2>
@@ -345,9 +342,50 @@
 							<li class="fragment">Curvas características operativas del receptor.</li>
 						</ul>
 					</section>
+					<section>
+						<h4>Prueba funcional con datos de papa estandarizados</h4>
+						<div style="display: flex; justify-content: space-between; align-items: center;">
+							<img src="img/stPapa.png" style="width:45%;">
+							<div>
+								<img src="img/rocStPapa.png"><img src="img/corrStPapa.png">
+							</div>
+						</div>
+					</section>
+					<section>
+						<h4>Prueba funcional con datos de papa no estandarizados</h4>
+						<div style="display: flex; justify-content: space-between; align-items: center;">
+							<img src="img/papa.png" style="width:45%;">
+							<div>
+								<img src="img/rocPapa.png"><img src="img/corrPapa.png">
+							</div>
+						</div>
+					</section>
+					<section>
+						<h4>Prueba funcional con muestra generada a partir del comportamiento de los datos de papa. (Distribución asimétrica positiva)</h4>
+						<div style="display: flex; justify-content: space-between; align-items: center;">
+							<img src="img/dataPapa.png" style="width:28%;">
+							<div>
+								<img src="img/rocData.png"><img src="img/corrData.png" style="height: 6em;">
+							</div>
+						</div>
+					</section>
+					<section>
+						<h4>Prueba funcional con muestra de datos normales generados aleatoriamente.</h4>
+						<div style="display: flex; justify-content: space-between; align-items: center;">
+							<img src="img/norm.png" style="width:30%;">
+							<div>
+								<img src="img/rocNorm.png"><img src="img/corrNorm.png">
+							</div>
+						</div>
+					</section>
 				</section>
 				<section>
 					<h2>Conclusiones y Recomendaciones</h2>
+					<ul>
+						<li class="fragment" style="margin-bottom: 1em;">Herramienta parametrizable y escalable de código abierto, que permite realizar clasificaciones multiclase de cualquier tipo de datos.</li>
+						<li class="fragment" style="margin-bottom: 1em;">Los datos de papa que se tienen como población para las pruebas no son buenas entradas para el clasificador.</li>
+						<li class="fragment" style="margin-bottom: 1em;">Evaluar el desarrollo de un ambiente para gráficos más interactivo con el usuario.</li>
+					</ul>
 				</section>
 				<section>
 					<h1>Gracias.</h1>
